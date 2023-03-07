@@ -78,27 +78,29 @@ const retirejsIntegration = {
                 </div>
             </div>
             <div class="form-group">
-                <h9>DevDep</h9>
-                <div class="mb-3 p-2">
-                    <label class="custom-checkbox align-items-center mr-3">
-                        <input type="checkbox" v-model="add_devdep">
-                        <h9 class="ml-1">
-                            Add dependencies from devDependencies
-                        </h9>
-                    </label>
-                </div>
-        
-                <div>
-                    <h9>Save intermediates to</h9>
-                    <p>
-                        <h13>Optional</h13>
-                    </p>
-                    <input type="text" class="form-control form-control-alternative"
-                        placeholder=""
-                        v-model="save_intermediates_to"
-                        :class="{ 'is-invalid': error.save_intermediates_to }">
-                    <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
-                </div>
+                <form autocomplete="off">
+                    <h9>DevDep</h9>
+                    <div class="mb-3 p-2">
+                        <label class="custom-checkbox align-items-center mr-3">
+                            <input type="checkbox" v-model="add_devdep">
+                            <h9 class="ml-1">
+                                Add dependencies from devDependencies
+                            </h9>
+                        </label>
+                    </div>
+            
+                    <div>
+                        <h9>Save intermediates to</h9>
+                        <p>
+                            <h13>Optional</h13>
+                        </p>
+                        <input type="text" class="form-control form-control-alternative"
+                            placeholder=""
+                            v-model="save_intermediates_to"
+                            :class="{ 'is-invalid': error.save_intermediates_to }">
+                        <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
+                    </div>
+                </form>
             </div>
         </div>
     `
